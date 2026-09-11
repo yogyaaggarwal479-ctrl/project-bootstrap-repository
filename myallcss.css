@@ -1,0 +1,585 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f3f3f3;
+    color: #111;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.navbar {
+    padding: 20px 0;
+}
+
+.navbar-brand {
+    color: #111;
+    font-size: 32px !important;
+    letter-spacing: -1px;
+}
+
+.navbar-brand span {
+    color: #0d6efd;
+}
+
+.nav-link {
+    color: #555;
+    font-weight: 500;
+    margin: 0 8px;
+    transition: 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #0d6efd !important;
+}
+
+.navbar-toggler {
+    border: none;
+    box-shadow: none !important;
+}
+
+.btn-dark {
+    border-radius: 50px;
+    padding: 10px 23px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn-dark:hover {
+    transform: translateY(-2px);
+}
+
+.rounded-5 {
+    border-radius: 25px !important;
+}
+
+h1 {
+    font-size: clamp(38px, 4vw, 55px);
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: -2px;
+}
+
+h2 {
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+h3 {
+    font-weight: 700;
+}
+
+.profile-card {
+    min-height: 400px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.09);
+}
+
+.profile-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.profile-card p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #777;
+}
+
+.profile-card h1 {
+    color: #111;
+}
+
+.marquee-card {
+    min-height: 65px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease;
+}
+
+.marquee-card:hover {
+    transform: translateY(-3px);
+}
+
+.marquee-card marquee {
+    font-size: 17px;
+    font-weight: 600;
+    color: #444;
+}
+
+.about-card {
+    position: relative;
+    min-height: 250px;
+    background: #fff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.09);
+}
+
+.about-card h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.about-card p.text-muted {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.small-heading {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.grid-card {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    background: #fff;
+    border-radius: 25px;
+    padding: 30px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.card-bottom {
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    bottom: 25px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.card-bottom h2 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.small-arrow {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #f2f2f2;
+    font-size: 20px;
+    transition: 0.3s ease;
+}
+
+.small-arrow:hover {
+    background: #0d6efd;
+    color: #fff;
+    transform: rotate(45deg);
+}
+
+.branding-card {
+    background: #111;
+    color: #fff;
+}
+
+.branding-card .small-heading {
+    color: #aaa;
+}
+
+.brand-shape {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.red-circle {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background: #ff4b4b;
+    border-radius: 50%;
+    left: 10px;
+    top: 10px;
+}
+
+.yellow-shape {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: #ffc107;
+    border-radius: 50%;
+    right: 5px;
+    top: 20px;
+}
+
+.blue-circle {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    background: #0d6efd;
+    border-radius: 50%;
+    left: 40px;
+    bottom: 10px;
+}
+
+.red-shape {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #ff4b4b;
+    transform: rotate(45deg);
+    right: 15px;
+    bottom: 5px;
+}
+
+.services-card {
+    background: #fff;
+}
+
+.service-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background: #f3f3f3;
+    font-size: 25px;
+    transition: 0.3s ease;
+}
+
+.service-icon:hover {
+    background: #0d6efd;
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+.profiles-card {
+    background: #fff;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.social-icons a {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #f2f2f2;
+    font-size: 22px;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: #0d6efd;
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+.information-card {
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.information-card h2 {
+    font-size: clamp(50px, 6vw, 75px);
+    line-height: 1;
+    margin: 10px 0;
+}
+
+.information-card p:last-child {
+    color: #777;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.contact-section {
+    margin-top: 30px;
+}
+
+.contact-card {
+    background: #111;
+    color: #fff;
+    border-radius: 25px;
+    padding: 60px 50px;
+    text-align: center;
+}
+
+.contact-card .small-heading {
+    color: #aaa;
+}
+
+.contact-card h2 {
+    font-size: clamp(42px, 6vw, 75px);
+    line-height: 1;
+    margin: 20px 0 35px;
+}
+
+.contact-card h2 span {
+    color: #0d6efd;
+}
+
+.talk-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 27px;
+    background: #0d6efd;
+    color: #fff;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.talk-btn:hover {
+    background: #fff;
+    color: #111;
+    transform: translateY(-3px);
+}
+
+.talk-btn i {
+    transition: 0.3s ease;
+}
+
+.talk-btn:hover i {
+    transform: rotate(45deg);
+}
+
+footer {
+    color: #777;
+}
+
+.footer-logo {
+    color: #111;
+}
+
+.footer-logo span {
+    color: #0d6efd;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #666;
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #0d6efd;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+@media (max-width: 991px) {
+
+    .navbar {
+        padding: 15px 0;
+    }
+
+    .navbar-nav {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .navbar .btn-dark {
+        display: block;
+        width: fit-content;
+        margin: 10px auto;
+    }
+
+    .profile-card {
+        min-height: 380px;
+    }
+
+    .grid-card {
+        min-height: 280px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .navbar-brand {
+        font-size: 28px !important;
+    }
+
+    .profile-card {
+        min-height: auto;
+        padding: 25px !important;
+    }
+
+    .profile-card img {
+        height: 280px;
+    }
+
+    .profile-card h1 {
+        font-size: 40px;
+    }
+
+    .profile-card .col-12.col-md-6:last-child {
+        margin-top: 25px;
+    }
+
+    .about-card {
+        min-height: 220px;
+    }
+
+    .grid-card {
+        min-height: 270px;
+        padding: 25px;
+    }
+
+    .card-bottom {
+        left: 25px;
+        right: 25px;
+        bottom: 22px;
+    }
+
+    .card-bottom h2 {
+        font-size: 24px;
+    }
+
+    .service-icons {
+        gap: 12px;
+    }
+
+    .service-icon {
+        width: 52px;
+        height: 52px;
+        font-size: 21px;
+    }
+
+    .contact-card {
+        padding: 45px 25px;
+    }
+
+    .contact-card h2 {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .profile-card img {
+        height: 230px;
+    }
+
+    .profile-card h1 {
+        font-size: 34px;
+    }
+
+    .profile-card p {
+        font-size: 14px;
+    }
+
+    .marquee-card marquee {
+        font-size: 15px;
+    }
+
+    .service-icons {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .service-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 19px;
+    }
+
+    .social-icons {
+        gap: 10px;
+    }
+
+    .social-icons a {
+        width: 48px;
+        height: 48px;
+        font-size: 19px;
+    }
+
+    .contact-card h2 {
+        font-size: 36px;
+    }
+
+    .talk-btn {
+        padding: 12px 22px;
+    }
+}
